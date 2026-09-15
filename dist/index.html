@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111111">
+  <meta name="description" content="Nodra — проект автономной mesh-связи. Знакомьтесь с идеей сети, в которой сообщения передаются от узла к узлу.">
+  <title>Nodra — связь за пределами покрытия</title>
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+  <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+    <symbol id="arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="arrow-up" viewBox="0 0 24 24"><path d="M6 18 18 6M6 6h12v12"/></symbol>
+    <symbol id="radio" viewBox="0 0 32 32"><circle cx="16" cy="16" r="2"/><path d="M10 10a8.5 8.5 0 0 0 0 12m12-12a8.5 8.5 0 0 1 0 12M5 5a15.5 15.5 0 0 0 0 22M27 5a15.5 15.5 0 0 1 0 22"/></symbol>
+    <symbol id="network" viewBox="0 0 32 32"><path d="m8 9 16 14M24 9 8 23M10 7h12M10 25h12"/><circle cx="7" cy="7" r="3"/><circle cx="25" cy="7" r="3"/><circle cx="7" cy="25" r="3"/><circle cx="25" cy="25" r="3"/></symbol>
+    <symbol id="message" viewBox="0 0 32 32"><path d="M6 5h20a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H12l-8 5V7a2 2 0 0 1 2-2Z"/><path d="M10 12h12M10 18h8"/></symbol>
+  </defs></svg>
+
+    <header class="site-header wrap">
+      <a class="wordmark" href="#" aria-label="Nodra — главная">nodra<span class="brand-dot">.</span></a>
+      <nav class="desktop-nav" aria-label="Основная навигация">
+        <a href="#idea">Идея</a><a href="#how-it-works">Как это работает</a><a href="#development">Разработка</a>
+      </nav>
+      <a class="header-action" href="#development">Знакомство с Nodra <svg class="icon"><use href="#arrow-up"/></svg></a>
+      <details class="mobile-menu">
+        <summary>Меню <span aria-hidden="true">+</span></summary>
+        <nav aria-label="Мобильная навигация"><a href="#idea">Идея</a><a href="#how-it-works">Как это работает</a><a href="#development">Разработка</a></nav>
+      </details>
+    </header>
+    <main id="main">
+      <section class="hero wrap" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="small-line"></span> НЕЗАВИСИМАЯ MESH-СВЯЗЬ</p>
+          <h1 id="hero-title">Связь.<br>За пределами<br><span class="muted-word">покрытия.</span></h1>
+          <p class="hero-description">Мир больше зоны приёма. Мы создаём Nodra, чтобы сообщения находили путь — от человека к человеку, от узла к узлу.</p>
+          <div class="hero-actions">
+            <a class="button button-white" href="#idea">Открыть Nodra <svg class="icon"><use href="#arrow-up"/></svg></a>
+            <a class="text-link" href="#how-it-works">Как это работает <svg class="icon"><use href="#arrow"/></svg></a>
+          </div>
+          <p class="hero-note"><span aria-hidden="true">[</span> МЕНЬШЕ ИНФРАСТРУКТУРЫ. БОЛЬШЕ СВОБОДЫ. <span aria-hidden="true">]</span></p>
+        </div>
+        <figure class="mesh-figure" aria-labelledby="mesh-caption">
+          <div class="figure-header"><span>NODE NETWORK / 001</span><span class="figure-cross" aria-hidden="true">+</span></div>
+          <svg class="mesh-diagram" viewBox="0 0 600 500" role="img" aria-labelledby="mesh-title mesh-desc">
+            <title id="mesh-title">Маршрут сообщения в mesh-сети</title>
+            <desc id="mesh-desc">Узел A передаёт сообщение через промежуточный узел B к узлу C. Другие узлы образуют дополнительные связи. Это иллюстрация принципа работы.</desc>
+            <defs>
+              <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="0.7" fill="#424242"/></pattern>
+              <radialGradient id="grid-fade"><stop offset="30%" stop-color="white"/><stop offset="100%" stop-color="black"/></radialGradient>
+              <mask id="grid-mask"><rect width="600" height="500" fill="url(#grid-fade)"/></mask>
+            </defs>
+            <rect width="600" height="500" fill="url(#grid)" mask="url(#grid-mask)"/>
+            <g class="range-rings"><circle cx="312" cy="248" r="108"/><circle cx="312" cy="248" r="182"/><circle cx="312" cy="248" r="255"/></g>
+            <g class="secondary-connections"><path d="M100 319 173 125 312 248 383 80 502 178 474 358 312 248 239 420 100 319M173 125 383 80M502 178 312 248M474 358 239 420"/></g>
+            <path class="active-connection" d="M100 319 312 248 502 178"/>
+            <g class="minor-node"><circle cx="173" cy="125" r="7"/><circle cx="383" cy="80" r="7"/><circle cx="474" cy="358" r="7"/><circle cx="239" cy="420" r="7"/></g>
+            <g class="major-node"><circle cx="100" cy="319" r="23"/><circle cx="312" cy="248" r="23"/><circle cx="502" cy="178" r="23"/></g>
+            <g class="node-center"><circle cx="100" cy="319" r="5"/><circle cx="312" cy="248" r="5"/><circle cx="502" cy="178" r="5"/></g>
+            <g class="node-label"><text x="100" y="366" text-anchor="middle">УЗЕЛ A</text><text x="312" y="295" text-anchor="middle">УЗЕЛ B</text><text x="502" y="225" text-anchor="middle">УЗЕЛ C</text></g>
+            <g class="node-sublabel"><text x="100" y="384" text-anchor="middle">отправитель</text><text x="312" y="313" text-anchor="middle">ретранслятор</text><text x="502" y="243" text-anchor="middle">получатель</text></g>
+            <g class="packet-annotation"><rect x="201" y="156" width="158" height="42" rx="5"/><text x="218" y="182">Есть связь.</text><path d="m332 172 6 6-6 6"/></g>
+            <circle class="travelling-packet" cx="0" cy="0" r="4"/>
+            <g class="diagram-coordinate"><text x="15" y="475">A → B → C</text><text x="582" y="475" text-anchor="end">MESH TOPOLOGY</text></g>
+          </svg>
+          <figcaption id="mesh-caption"><span class="route-key"><i aria-hidden="true"></i> Путь сообщения</span><span>Схема сети</span></figcaption>
+        </figure>
+      </section>
+      <div class="hero-bottom wrap"><span>СЕТЬ НАЧИНАЕТСЯ С ЛЮДЕЙ</span><span>ПРОЕКТ В РАЗРАБОТКЕ <span class="tiny-cross" aria-hidden="true">+</span></span></div>
+      <section class="idea-section light-surface" id="idea" aria-labelledby="idea-title">
+        <div class="wrap">
+          <div class="section-heading">
+            <p class="eyebrow section-index">01 / ИДЕЯ</p>
+            <div><h2 id="idea-title">Ближе друг к другу.<br><span class="gray-text">Дальше от ограничений.</span></h2><p class="section-intro">За городом, в дороге или там, где заканчивается привычная сеть. Идея Nodra проста: дать небольшим устройствам возможность передавать сообщения друг через друга.</p></div>
+          </div>
+          <div class="features">
+            <article class="feature"><div class="feature-top"><svg class="feature-icon"><use href="#radio"/></svg><span>01</span></div><h3>За зоной приёма</h3><p>Для такой связи не нужна сотовая вышка. В основе идеи — прямой радиообмен между устройствами.</p></article>
+            <article class="feature"><div class="feature-top"><svg class="feature-icon"><use href="#network"/></svg><span>02</span></div><h3>Каждый узел важен</h3><p>Промежуточные узлы помогают сообщению пройти дальше. Сеть складывается из связей между ними.</p></article>
+            <article class="feature"><div class="feature-top"><svg class="feature-icon"><use href="#message"/></svg><span>03</span></div><h3>Самое важное — рядом</h3><p>«Я на месте». «Встречаемся у тропы». Иногда короткого сообщения достаточно, чтобы быть ближе.</p></article>
+          </div>
+        </div>
+      </section>
+      <section class="how-section light-surface" id="how-it-works" aria-labelledby="how-title">
+        <div class="wrap">
+          <div class="section-heading"><p class="eyebrow section-index">02 / ПРИНЦИП РАБОТЫ</p><div><h2 id="how-title">У сообщения<br>есть свой маршрут.</h2></div></div>
+          <div class="how-layout">
+            <div class="route-panel" aria-label="Схема: отправитель, промежуточный узел, получатель">
+              <div class="route-panel-label">ОТ УЗЛА К УЗЛУ <svg class="icon"><use href="#arrow-up"/></svg></div>
+              <div class="route-flow"><span class="route-node">A</span><span class="route-line"></span><span class="route-node relay">B</span><span class="route-line"></span><span class="route-node">C</span></div>
+              <div class="route-flow-labels"><span>Отправитель</span><span>Ретранслятор</span><span>Получатель</span></div>
+              <p>Один разговор.<br>Несколько точек связи.</p>
+              <div class="route-panel-foot"><span>NODRA / MESH CONCEPT</span><span aria-hidden="true">↗</span></div>
+            </div>
+            <ol class="steps">
+              <li><span class="step-number">01</span><div><h3>Сообщение отправляется</h3><p>Вы передаёте текст своему устройству. Оно становится первой точкой на пути сообщения.</p></div></li>
+              <li><span class="step-number">02</span><div><h3>Узлы помогают друг другу</h3><p>Сообщение проходит через промежуточный узел, когда адресат находится за пределами прямой связи.</p></div></li>
+              <li><span class="step-number">03</span><div><h3>Разговор продолжается</h3><p>Устройство получателя принимает сообщение. Так несколько отдельных узлов становятся сетью.</p></div></li>
+            </ol>
+          </div>
+          <p class="technical-note">Схема показывает принцип mesh-связи. Возможность и дальность передачи зависят от оборудования, рельефа и расположения узлов.</p>
+        </div>
+      </section>
+      <section class="development-section" id="development" aria-labelledby="development-title">
+        <div class="wrap development-layout">
+          <div><p class="eyebrow">03 / НАЧАЛО ПУТИ</p><h2 id="development-title">Большая сеть.<br>С первого узла<span class="blue-text">.</span></h2><p class="development-copy">Nodra развивается. Сейчас это прототип: мы работаем над обменом сообщениями и логикой их передачи между узлами.</p><a class="button button-white" href="#project-status">Где мы сейчас <svg class="icon"><use href="#arrow"/></svg></a></div>
+          <aside class="status-panel" id="project-status" aria-labelledby="status-title"><div class="status-heading"><span class="eyebrow">СТАТУС ПРОЕКТА</span><span class="status-tag">ПРОТОТИП</span></div><h3 id="status-title">Шаг за шагом.<br>Узел за узлом.</h3><p>Первая цель — надёжно провести сообщение от отправителя к получателю.</p><dl><div><dt>Обмен сообщениями</dt><dd>Разработка</dd></div><div><dt>Передача между узлами</dt><dd>Разработка</dd></div><div><dt>Готовый релиз</dt><dd>Впереди</dd></div></dl><p class="status-note">Готовая прошивка и инструкции появятся по мере готовности проекта.</p></aside>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer"><div class="wrap footer-main"><a class="wordmark" href="#" aria-label="Nodra — вернуться наверх">nodra<span class="brand-dot">.</span></a><p>Связь начинается с нас.</p><a class="footer-top" href="#">Наверх <svg class="icon"><use href="#arrow-up"/></svg></a></div><div class="wrap footer-bottom"><span>© <span id="year">2026</span> Nodra</span><span>НЕЗАВИСИМАЯ СВЯЗЬ. ОБЩАЯ ИДЕЯ.</span></div></footer>
+</body>
+</html>

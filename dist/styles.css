@@ -134,7 +134,11 @@ h3 { font-size: 23px; font-weight: 500; line-height: 1.25; letter-spacing: -.025
 .status-panel p.status-note { border-top: 1px solid #343434; padding-top: 17px; font-size: 13px; color: #8c8c8c; margin-top: 0; }
 .site-footer { background: #111; }
 .footer-main { min-height: 133px; display: flex; align-items: center; justify-content: space-between; gap: 32px; }
-.footer-main > p { color: #a0a0a0; font-size: 16px; }
+.footer-community { min-width: 0; }
+.footer-community > p { color: #a0a0a0; font-size: 16px; }
+.footer-telegram { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; margin-top: 4px; font-size: 14px; }
+.footer-telegram .icon { width: 18px; height: 18px; flex-basis: 18px; }
+.footer-telegram:hover span { text-decoration: underline; text-underline-offset: 4px; }
 .footer-top { display: flex; align-items: center; gap: 16px; font-size: 14px; min-height: 44px; }
 .footer-top:hover { color: #aaa; }
 .footer-bottom { display: flex; justify-content: space-between; gap: 24px; padding-block: 23px; border-top: 1px solid #303030; color: #868686; font: 12px/1.6 'Courier New', monospace; letter-spacing: .03em; }
@@ -225,7 +229,8 @@ h3 { font-size: 23px; font-weight: 500; line-height: 1.25; letter-spacing: -.025
   .status-panel { padding: 23px 20px; }
   .status-panel dl > div { gap: 12px; }
   .footer-main { padding-block: 30px; min-height: 0; gap: 20px; flex-wrap: wrap; }
-  .footer-main > p { order: 3; flex-basis: 100%; font-size: 14px; }
+  .footer-community { order: 3; flex-basis: 100%; }
+  .footer-community > p { font-size: 14px; }
   .footer-bottom { flex-wrap: wrap; gap: 10px; padding-block: 22px; }
 }
 @media (prefers-reduced-motion: reduce) {

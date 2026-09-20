@@ -11,7 +11,9 @@
   <script src="./site.js" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#main">Перейти к содержимому</a>
+  <video class="site-motion-bg" autoplay muted loop playsinline aria-hidden="true" tabindex="-1">
+    <source src="./nodra-mesh.mp4" type="video/mp4">
+  </video>
   <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
     <symbol id="arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
     <symbol id="arrow-up" viewBox="0 0 24 24"><path d="M6 18 18 6M6 6h12v12"/></symbol>
@@ -48,25 +50,19 @@
         <figure class="mesh-figure" aria-labelledby="mesh-caption">
           <div class="figure-header"><span>NODE NETWORK / 001</span><span class="figure-cross" aria-hidden="true">+</span></div>
           <svg class="mesh-diagram" viewBox="0 0 600 500" role="img" aria-labelledby="mesh-title mesh-desc">
-            <title id="mesh-title">Маршрут сообщения в mesh-сети</title>
-            <desc id="mesh-desc">Узел A передаёт сообщение через промежуточный узел B к узлу C. Другие узлы образуют дополнительные связи. Это иллюстрация принципа работы.</desc>
-            <defs>
-              <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="0.7" fill="#424242"/></pattern>
-              <radialGradient id="grid-fade"><stop offset="30%" stop-color="white"/><stop offset="100%" stop-color="black"/></radialGradient>
-              <mask id="grid-mask"><rect width="600" height="500" fill="url(#grid-fade)"/></mask>
-            </defs>
-            <rect width="600" height="500" fill="url(#grid)" mask="url(#grid-mask)"/>
-            <g class="range-rings"><circle cx="312" cy="248" r="108"/><circle cx="312" cy="248" r="182"/><circle cx="312" cy="248" r="255"/></g>
-            <g class="secondary-connections"><path d="M100 319 173 125 312 248 383 80 502 178 474 358 312 248 239 420 100 319M173 125 383 80M502 178 312 248M474 358 239 420"/></g>
-            <path class="active-connection" d="M100 319 312 248 502 178"/>
-            <g class="minor-node"><circle cx="173" cy="125" r="7"/><circle cx="383" cy="80" r="7"/><circle cx="474" cy="358" r="7"/><circle cx="239" cy="420" r="7"/></g>
-            <g class="major-node"><circle cx="100" cy="319" r="23"/><circle cx="312" cy="248" r="23"/><circle cx="502" cy="178" r="23"/></g>
-            <g class="node-center"><circle cx="100" cy="319" r="5"/><circle cx="312" cy="248" r="5"/><circle cx="502" cy="178" r="5"/></g>
-            <g class="node-label"><text x="100" y="366" text-anchor="middle">УЗЕЛ A</text><text x="312" y="295" text-anchor="middle">УЗЕЛ B</text><text x="502" y="225" text-anchor="middle">УЗЕЛ C</text></g>
-            <g class="node-sublabel"><text x="100" y="384" text-anchor="middle">отправитель</text><text x="312" y="313" text-anchor="middle">ретранслятор</text><text x="502" y="243" text-anchor="middle">получатель</text></g>
-            <g class="packet-annotation"><rect x="201" y="156" width="158" height="42" rx="5"/><text x="218" y="182">Есть связь.</text><path d="m332 172 6 6-6 6"/></g>
+            <title id="mesh-title">Сеть из семи узлов</title>
+            <desc id="mesh-desc">Шесть узлов образуют шестиугольный контур. Две диагонали проходят через седьмой узел в центре. Белая точка перемещается по соединениям сети.</desc>
+            <g class="secondary-connections" aria-hidden="true">
+              <path d="M180 90 L405 75 L550 250 L420 410 L190 430 L50 250 Z M180 90 L300 250 L405 75 M550 250 L300 250 L420 410 M190 430 L300 250 L50 250 M180 90 L100 150 M405 75 L300 50 M550 250 L500 150 M420 410 L500 350 M190 430 L300 450 M50 250 L100 350"/>
+              <g stroke-dasharray="none"><circle cx="180" cy="90" r="5"/><circle cx="405" cy="75" r="5"/><circle cx="550" cy="250" r="5"/><circle cx="420" cy="410" r="5"/><circle cx="190" cy="430" r="5"/><circle cx="50" cy="250" r="5"/></g>
+            </g>
+            <path class="active-connection" d="M300 50 L500 150 L500 350 L300 450 L100 350 L100 150 Z M100 150 L300 250 L500 350 M100 350 L300 250 L500 150"/>
+            <g class="major-node"><circle cx="300" cy="50" r="23"/><circle cx="100" cy="150" r="23"/><circle cx="100" cy="350" r="23"/><circle cx="300" cy="450" r="23"/><circle cx="500" cy="350" r="23"/><circle cx="500" cy="150" r="23"/><circle cx="300" cy="250" r="23"/></g>
+            <g class="node-center"><circle cx="300" cy="50" r="5"/><circle cx="100" cy="150" r="5"/><circle cx="100" cy="350" r="5"/><circle cx="300" cy="450" r="5"/><circle cx="500" cy="350" r="5"/><circle cx="500" cy="150" r="5"/><circle cx="300" cy="250" r="5"/></g>
+            <g class="node-label"><text x="100" y="397" text-anchor="middle">УЗЕЛ A</text><text x="500" y="103" text-anchor="middle">УЗЕЛ B</text></g>
+            <g class="node-sublabel node-roles"><text x="100" y="415" text-anchor="middle">отправитель</text><text x="500" y="121" text-anchor="middle">получатель</text></g>
+            <text class="node-label relay-label" x="300" y="295" text-anchor="middle">РЕТРАНСЛЯТОР</text>
             <circle class="travelling-packet" cx="0" cy="0" r="4"/>
-            <g class="diagram-coordinate"><text x="15" y="475">A → B → C</text><text x="582" y="475" text-anchor="end">MESH TOPOLOGY</text></g>
           </svg>
           <figcaption id="mesh-caption"><span class="route-key"><i aria-hidden="true"></i> Путь сообщения</span><span>Схема сети</span></figcaption>
         </figure>
@@ -120,7 +116,7 @@
       <section class="development-section" id="development" aria-labelledby="development-title">
         <div class="wrap development-layout">
           <div><p class="eyebrow">04 / НАЧАЛО ПУТИ</p><h2 id="development-title">Большая сеть.<br>С первого узла<span class="blue-text">.</span></h2><p class="development-copy">Nodra развивается. Сейчас проект на этапе MVP: мы работаем над обменом сообщениями и логикой их передачи между узлами.</p><a class="button button-ivory" href="#project-status">Где мы сейчас <svg class="icon"><use href="#arrow"/></svg></a></div>
-          <aside class="status-panel" id="project-status" aria-labelledby="status-title"><div class="status-heading"><span class="eyebrow">СТАТУС ПРОЕКТА</span><span class="status-tag">MVP</span></div><h3 id="status-title">Шаг за шагом.<br>Узел за узлом.</h3><p>Первая цель — надёжно провести сообщение от отправителя к получателю.</p><dl><div><dt>Обмен сообщениями</dt><dd>Готово</dd></div><div><dt>Передача между узлами</dt><dd>Разработка</dd></div><div><dt>Готовый релиз</dt><dd>ОБТ</dd></div></dl><p class="status-note">Готовая прошивка и инструкции появятся по мере готовности проекта.</p></aside>
+          <aside class="status-panel" id="project-status" aria-labelledby="status-title"><div class="status-heading"><span class="eyebrow">СТАТУС ПРОЕКТА</span><span class="status-tag">MVP</span></div><h3 id="status-title">Шаг за шагом.<br>Узел за узлом.</h3><p>Первая цель — надёжно провести сообщение от отправителя к получателю.</p><dl><div><dt>Обмен сообщениями</dt><dd>Готово</dd></div><div><dt>Передача между узлами</dt><dd>ОБТ</dd></div><div><dt>Готовый релиз</dt><dd>ОБТ</dd></div></dl><p class="status-note">Готовая прошивка и инструкции появятся по мере готовности проекта.</p></aside>
         </div>
       </section>
     </main>

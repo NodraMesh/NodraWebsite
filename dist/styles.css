@@ -118,12 +118,15 @@ h3 { font-family: var(--font-sans); font-size: 23px; font-weight: 500; line-heig
 .steps h3 { font-size: 21px; }
 .steps p { font-size: 16px; color: #626262; line-height: 1.65; margin-top: 10px; }
 .technical-note { max-width: 580px; font-size: 13px; line-height: 1.7; color: #727272; margin-top: 24px; }
-.hardware-section { padding-bottom: 96px; }
-.hardware-section > .wrap { padding-top: 64px; border-top: 1px solid #d3d3d3; }
+.hardware-section { position: relative; overflow: hidden; padding-bottom: 96px; background: #ebe7dc; border-top: 1px solid #cbc5b8; border-bottom: 1px solid #cbc5b8; }
+.hardware-section::before { content: ''; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(135deg, rgba(75,131,255,.055), transparent 34%); }
+.hardware-section > .wrap { position: relative; padding-top: 76px; }
 .hardware-content { min-width: 0; }
-.hardware-title-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 32px; }
-.hardware-preorder { margin-top: 14px; font-size: 18px; line-height: 1.5; color: #626262; }
-.hardware-release-mark { flex: 0 0 auto; margin-top: 8px; padding: 7px 9px; border: 1px solid #c9c4b8; color: #69665f; font: 11px/1.4 var(--font-mono); letter-spacing: .075em; }
+.hardware-title-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 32px; padding-bottom: 30px; border-bottom: 1px solid #bdb7aa; }
+.hardware-title-row h2 { position: relative; display: inline-block; font-size: clamp(3rem, 5.4vw, 5.2rem); line-height: .98; letter-spacing: -.065em; font-weight: 520; }
+.hardware-title-row h2::after { content: ''; display: block; width: 72px; height: 3px; margin-top: 20px; background: var(--blue); }
+.hardware-preorder { margin-top: 15px; font-size: 17px; line-height: 1.5; color: #58544d; }
+.hardware-release-mark { flex: 0 0 auto; margin-top: 8px; padding: 8px 11px; border: 1px solid #222; color: #222; background: rgba(244,240,230,.55); font: 11px/1.4 var(--font-mono); letter-spacing: .075em; }
 .hardware-plan { margin-top: 48px; padding: 34px 0 0; border-top: 1px solid #c8c4ba; }
 .hardware-plan-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; }
 .hardware-plan-kicker, .hardware-order-kicker { color: #6f6b63; font: 11px/1.5 var(--font-mono); letter-spacing: .1em; }
@@ -226,7 +229,8 @@ h3 { font-family: var(--font-sans); font-size: 23px; font-weight: 500; line-heig
   .route-panel > p { margin-block: 30px; }
   .how-section { padding-bottom: 58px; }
   .hardware-section { padding-bottom: 62px; }
-  .hardware-section > .wrap { padding-top: 45px; }
+  .hardware-section > .wrap { padding-top: 52px; }
+  .hardware-title-row h2 { font-size: clamp(2.7rem, 8vw, 4.4rem); }
   .hardware-plan-head { gap: 26px; }
   .hardware-order { grid-template-columns: 1fr; gap: 34px; margin-top: 52px; }
   .development-section { padding-block: 60px; }
@@ -261,6 +265,9 @@ h3 { font-family: var(--font-sans); font-size: 23px; font-weight: 500; line-heig
   .feature p { max-width: none; margin-top: 12px; }
   .section-intro { margin-top: 21px; }
   .hardware-title-row, .hardware-plan-head { flex-direction: column; }
+  .hardware-title-row { padding-bottom: 24px; }
+  .hardware-title-row h2 { font-size: clamp(2.5rem, 13vw, 3.8rem); }
+  .hardware-title-row h2::after { width: 54px; margin-top: 16px; }
   .hardware-release-mark { margin-top: 0; }
   .hardware-price { padding-top: 0; text-align: left; }
   .hardware-benefits { grid-template-columns: 1fr; }

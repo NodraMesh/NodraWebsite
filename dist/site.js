@@ -15,3 +15,19 @@ if (menu) {
 }
 const year = document.querySelector('#year');
 if (year) year.textContent = String(new Date().getFullYear());
+
+const hardwarePreorderLink = document.getElementById('hardware-preorder-link');
+
+if (hardwarePreorderLink) {
+  const isMobileDevice =
+    window.matchMedia('(pointer: coarse)').matches ||
+    /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+  if (isMobileDevice) {
+    hardwarePreorderLink.href = hardwarePreorderLink.dataset.mobileHref;
+    hardwarePreorderLink.removeAttribute('target');
+    hardwarePreorderLink.removeAttribute('rel');
+  } else {
+    hardwarePreorderLink.href = hardwarePreorderLink.dataset.desktopHref;
+  }
+}

@@ -135,6 +135,10 @@ h3 { font-family: var(--font-sans); font-size: 23px; font-weight: 500; line-heig
 .hardware-price strong { display: block; font-size: clamp(1.85rem, 2.7vw, 2.6rem); font-weight: 500; letter-spacing: -.045em; white-space: nowrap; }
 .hardware-price span { display: block; margin-top: 5px; color: #767169; font-size: 13px; }
 .hardware-plan-lead { max-width: 720px; margin-top: 28px; color: #5f5b54; font-size: 16px; line-height: 1.72; }
+.hardware-range-callout { display: grid; grid-template-columns: minmax(150px, .62fr) 2fr; gap: 30px; align-items: start; margin-top: 34px; padding: 28px 30px; border: 1px solid #bdb7aa; background: rgba(244,240,230,.58); }
+.hardware-range-value { font-size: clamp(2.1rem, 4vw, 3.5rem); font-weight: 520; line-height: 1; letter-spacing: -.055em; white-space: nowrap; }
+.hardware-range-callout strong { display: block; font-size: 16px; font-weight: 600; letter-spacing: -.015em; }
+.hardware-range-callout p { margin-top: 9px; max-width: 650px; color: #625e57; font-size: 14px; line-height: 1.68; }
 .hardware-benefits { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 44px; border-top: 1px solid #cfcbc1; border-left: 1px solid #cfcbc1; }
 .hardware-benefit { min-height: 190px; padding: 24px 26px 26px; border-right: 1px solid #cfcbc1; border-bottom: 1px solid #cfcbc1; }
 .hardware-benefit > span { color: #89847b; font: 11px/1.4 var(--font-mono); }
@@ -270,6 +274,8 @@ h3 { font-family: var(--font-sans); font-size: 23px; font-weight: 500; line-heig
   .hardware-title-row h2::after { width: 54px; margin-top: 16px; }
   .hardware-release-mark { margin-top: 0; }
   .hardware-price { padding-top: 0; text-align: left; }
+  .hardware-range-callout { grid-template-columns: 1fr; gap: 18px; padding: 23px 20px; }
+  .hardware-range-value { font-size: clamp(2.25rem, 12vw, 3.2rem); }
   .hardware-benefits { grid-template-columns: 1fr; }
   .hardware-benefit { min-height: 0; }
   .hardware-benefit h4 { margin-top: 25px; }

@@ -7,7 +7,7 @@
   --gray: #a0a0a0;
   --blue: #4b83ff;
   --line: #303030;
-  --font-sans: "Segoe UI Variable Display", "Helvetica Neue", "Segoe UI", var(--font-sans);
+  --font-sans: "Segoe UI Variable Display", "Helvetica Neue", "Segoe UI", Arial, sans-serif;
   --font-mono: "Cascadia Mono", "SFMono-Regular", Consolas, "Liberation Mono", monospace;
   font-family: var(--font-sans);
   font-synthesis: none;

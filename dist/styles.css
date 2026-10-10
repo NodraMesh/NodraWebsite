@@ -135,10 +135,11 @@ h3 { font-family: var(--font-sans); font-size: 23px; font-weight: 500; line-heig
 .hardware-price strong { display: block; font-size: clamp(1.85rem, 2.7vw, 2.6rem); font-weight: 500; letter-spacing: -.045em; white-space: nowrap; }
 .hardware-price span { display: block; margin-top: 5px; color: #767169; font-size: 13px; }
 .hardware-plan-lead { max-width: 720px; margin-top: 28px; color: #5f5b54; font-size: 16px; line-height: 1.72; }
-.hardware-range-callout { display: grid; grid-template-columns: minmax(150px, .62fr) 2fr; gap: 30px; align-items: start; margin-top: 34px; padding: 28px 30px; border: 1px solid #bdb7aa; background: rgba(244,240,230,.58); }
-.hardware-range-value { font-size: clamp(2.1rem, 4vw, 3.5rem); font-weight: 520; line-height: 1; letter-spacing: -.055em; white-space: nowrap; }
-.hardware-range-callout strong { display: block; font-size: 16px; font-weight: 600; letter-spacing: -.015em; }
-.hardware-range-callout p { margin-top: 9px; max-width: 650px; color: #625e57; font-size: 14px; line-height: 1.68; }
+.hardware-range-callout { display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: 48px; align-items: center; margin-top: 34px; padding: 34px 36px; border: 1px solid #bdb7aa; background: rgba(244,240,230,.58); }
+.hardware-range-value { display: block; font-size: clamp(2.75rem, 3.5vw, 4rem); font-weight: 520; line-height: .95; letter-spacing: -.06em; white-space: nowrap; }
+.hardware-range-callout > div { min-width: 0; }
+.hardware-range-callout strong { display: block; max-width: 560px; font-size: 16px; font-weight: 600; line-height: 1.35; letter-spacing: -.015em; }
+.hardware-range-callout p { margin-top: 10px; max-width: 680px; color: #625e57; font-size: 14px; line-height: 1.7; }
 .hardware-benefits { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 44px; border-top: 1px solid #cfcbc1; border-left: 1px solid #cfcbc1; }
 .hardware-benefit { min-height: 190px; padding: 24px 26px 26px; border-right: 1px solid #cfcbc1; border-bottom: 1px solid #cfcbc1; }
 .hardware-benefit > span { color: #89847b; font: 11px/1.4 var(--font-mono); }
@@ -236,6 +237,8 @@ h3 { font-family: var(--font-sans); font-size: 23px; font-weight: 500; line-heig
   .hardware-section > .wrap { padding-top: 52px; }
   .hardware-title-row h2 { font-size: clamp(2.7rem, 8vw, 4.4rem); }
   .hardware-plan-head { gap: 26px; }
+  .hardware-range-callout { grid-template-columns: 220px minmax(0, 1fr); gap: 32px; padding: 30px 28px; }
+  .hardware-range-value { font-size: clamp(2.5rem, 5vw, 3.5rem); }
   .hardware-order { grid-template-columns: 1fr; gap: 34px; margin-top: 52px; }
   .development-section { padding-block: 60px; }
   .development-layout { grid-template-columns: 1fr; gap: 45px; }
@@ -274,8 +277,8 @@ h3 { font-family: var(--font-sans); font-size: 23px; font-weight: 500; line-heig
   .hardware-title-row h2::after { width: 54px; margin-top: 16px; }
   .hardware-release-mark { margin-top: 0; }
   .hardware-price { padding-top: 0; text-align: left; }
-  .hardware-range-callout { grid-template-columns: 1fr; gap: 18px; padding: 23px 20px; }
-  .hardware-range-value { font-size: clamp(2.25rem, 12vw, 3.2rem); }
+  .hardware-range-callout { grid-template-columns: 1fr; gap: 20px; padding: 24px 20px; }
+  .hardware-range-value { font-size: clamp(2.45rem, 12vw, 3.35rem); }
   .hardware-benefits { grid-template-columns: 1fr; }
   .hardware-benefit { min-height: 0; }
   .hardware-benefit h4 { margin-top: 25px; }

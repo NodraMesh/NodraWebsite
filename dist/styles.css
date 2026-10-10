@@ -7,11 +7,12 @@
   --gray: #a0a0a0;
   --blue: #4b83ff;
   --line: #303030;
-  --font-sans: "Segoe UI Variable Display", "Helvetica Neue", "Segoe UI", Arial, sans-serif;
-  --font-mono: "Cascadia Mono", "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  --font-sans: "Pixelify Sans", "Cascadia Mono", "Courier New", monospace;
+  --font-mono: "Pixelify Sans", "Cascadia Mono", "Courier New", monospace;
   font-family: var(--font-sans);
   font-synthesis: none;
   -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 2rem; }
@@ -44,7 +45,7 @@ svg { display: block; }
 .eyebrow { font-family: var(--font-mono); font-size: 12px; font-weight: 400; line-height: 1.6; letter-spacing: .08em; }
 .hero-copy .eyebrow { display: flex; align-items: center; gap: 12px; color: #c6c6c6; margin-bottom: 30px; }
 .small-line { width: 22px; height: 2px; background: var(--blue); }
-h1 { font-family: var(--font-sans); font-size: clamp(3.4rem, 6.3vw, 6.1rem); line-height: 1.04; letter-spacing: -.064em; font-weight: 470; text-rendering: geometricPrecision; }
+h1 { font-family: var(--font-sans); font-size: clamp(3.4rem, 6.3vw, 6.1rem); line-height: .98; letter-spacing: -.025em; font-weight: 500; text-rendering: geometricPrecision; }
 .muted-word { color: #777; }
 .hero-description { color: #aaa; max-width: 440px; font-size: 16px; line-height: 1.65; margin-top: 29px; }
 .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 28px; margin-top: 34px; }
@@ -87,7 +88,7 @@ h1 { font-family: var(--font-sans); font-size: clamp(3.4rem, 6.3vw, 6.1rem); lin
 .idea-section { padding-block: 104px 86px; }
 .section-heading { display: grid; grid-template-columns: 1fr 3fr; gap: 52px; }
 .section-index { padding-top: 8px; color: #656565; }
-h2 { font-family: var(--font-sans); font-size: clamp(2.1rem, 3.7vw, 3.5rem); font-weight: 470; letter-spacing: -.048em; line-height: 1.1; text-rendering: geometricPrecision; }
+h2 { font-family: var(--font-sans); font-size: clamp(2.1rem, 3.7vw, 3.5rem); font-weight: 500; letter-spacing: -.02em; line-height: 1.05; text-rendering: geometricPrecision; }
 .gray-text { color: #7a7a7a; }
 .section-intro { margin-top: 24px; max-width: 585px; font-size: 16px; line-height: 1.7; color: #626262; }
 .features { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px; margin-top: 64px; }
@@ -95,7 +96,7 @@ h2 { font-family: var(--font-sans); font-size: clamp(2.1rem, 3.7vw, 3.5rem); fon
 .feature-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 39px; }
 .feature-top span { color: #858585; font: 12px var(--font-mono); }
 .feature-icon { width: 32px; height: 32px; fill: none; stroke: #222; stroke-width: 1.2; stroke-linecap: round; stroke-linejoin: round; }
-h3 { font-family: var(--font-sans); font-size: 23px; font-weight: 500; line-height: 1.25; letter-spacing: -.025em; text-rendering: geometricPrecision; }
+h3 { font-family: var(--font-sans); font-size: 23px; font-weight: 500; line-height: 1.18; letter-spacing: -.01em; text-rendering: geometricPrecision; }
 .feature p { max-width: 345px; margin-top: 17px; color: #626262; font-size: 16px; line-height: 1.65; }
 .how-section { padding-block: 0 95px; }
 .how-section > .wrap { border-top: 1px solid #d3d3d3; padding-top: 80px; }
@@ -123,20 +124,20 @@ h3 { font-family: var(--font-sans); font-size: 23px; font-weight: 500; line-heig
 .hardware-section > .wrap { position: relative; padding-top: 76px; }
 .hardware-content { min-width: 0; }
 .hardware-title-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 32px; padding-bottom: 30px; border-bottom: 1px solid #bdb7aa; }
-.hardware-title-row h2 { position: relative; display: inline-block; font-size: clamp(3rem, 5.4vw, 5.2rem); line-height: .98; letter-spacing: -.065em; font-weight: 520; }
+.hardware-title-row h2 { position: relative; display: inline-block; font-size: clamp(3rem, 5.4vw, 5.2rem); line-height: .92; letter-spacing: -.025em; font-weight: 600; }
 .hardware-title-row h2::after { content: ''; display: block; width: 72px; height: 3px; margin-top: 20px; background: var(--blue); }
 .hardware-preorder { margin-top: 15px; font-size: 17px; line-height: 1.5; color: #58544d; }
 .hardware-release-mark { flex: 0 0 auto; margin-top: 8px; padding: 8px 11px; border: 1px solid #222; color: #222; background: rgba(244,240,230,.55); font: 11px/1.4 var(--font-mono); letter-spacing: .075em; }
 .hardware-plan { margin-top: 48px; padding: 34px 0 0; border-top: 1px solid #c8c4ba; }
 .hardware-plan-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; }
 .hardware-plan-kicker, .hardware-order-kicker { color: #6f6b63; font: 11px/1.5 var(--font-mono); letter-spacing: .1em; }
-.hardware-plan h3 { margin-top: 14px; font-size: clamp(1.9rem, 3vw, 2.75rem); letter-spacing: -.045em; line-height: 1.08; }
+.hardware-plan h3 { margin-top: 14px; font-size: clamp(1.9rem, 3vw, 2.75rem); letter-spacing: -.015em; line-height: 1.02; }
 .hardware-price { flex: 0 0 auto; text-align: right; padding-top: 22px; }
-.hardware-price strong { display: block; font-size: clamp(1.85rem, 2.7vw, 2.6rem); font-weight: 500; letter-spacing: -.045em; white-space: nowrap; }
+.hardware-price strong { display: block; font-size: clamp(1.85rem, 2.7vw, 2.6rem); font-weight: 600; letter-spacing: -.015em; white-space: nowrap; }
 .hardware-price span { display: block; margin-top: 5px; color: #767169; font-size: 13px; }
 .hardware-plan-lead { max-width: 720px; margin-top: 28px; color: #5f5b54; font-size: 16px; line-height: 1.72; }
 .hardware-range-callout { display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: 48px; align-items: center; margin-top: 34px; padding: 34px 36px; border: 1px solid #bdb7aa; background: rgba(244,240,230,.58); }
-.hardware-range-value { display: block; font-size: clamp(2.75rem, 3.5vw, 4rem); font-weight: 520; line-height: .95; letter-spacing: -.06em; white-space: nowrap; }
+.hardware-range-value { display: block; font-size: clamp(2.75rem, 3.5vw, 4rem); font-weight: 600; line-height: .9; letter-spacing: -.02em; white-space: nowrap; }
 .hardware-range-callout > div { min-width: 0; }
 .hardware-range-callout strong { display: block; max-width: 560px; font-size: 16px; font-weight: 600; line-height: 1.35; letter-spacing: -.015em; }
 .hardware-range-callout p { margin-top: 10px; max-width: 680px; color: #625e57; font-size: 14px; line-height: 1.7; }

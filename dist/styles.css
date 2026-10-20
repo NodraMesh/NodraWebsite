@@ -215,15 +215,15 @@ h3 { font-family: var(--font-sans); font-size: 23px; font-weight: 560; line-heig
   .development-layout { gap: 54px; }
 }
 @media (max-width: 800px) {
-  .site-header { min-height: 80px; }
+  .site-header { min-height: 80px; z-index: 20; }
   .desktop-nav, .header-action { display: none; }
-  .mobile-menu { display: block; position: relative; }
+  .mobile-menu { display: block; position: relative; z-index: 21; }
   .mobile-menu summary { cursor: pointer; list-style: none; font-size: 14px; padding: 14px 0 14px 20px; display: flex; align-items: center; gap: 20px; }
   .mobile-menu summary::-webkit-details-marker { display: none; }
   .mobile-menu summary span { font-size: 24px; line-height: 1; transition: transform .18s; }
   .mobile-menu[open] summary span { transform: rotate(45deg); }
-  .mobile-menu nav { position: absolute; right: 0; top: calc(100% + 13px); width: min(290px, calc(100vw - 48px)); padding: 10px 20px; z-index: 5; background: #1d1d1d; border: 1px solid #444; box-shadow: 0 14px 35px #0006; }
-  .mobile-menu nav a { display: block; font-size: 16px; padding-block: 16px; }
+  .mobile-menu nav { position: absolute; right: 0; top: calc(100% + 13px); width: min(290px, calc(100vw - 40px)); padding: 10px 20px; z-index: 30; background: #1d1d1d; border: 1px solid #444; box-shadow: 0 18px 40px #000b; isolation: isolate; }
+  .mobile-menu nav a { position: relative; z-index: 1; display: block; font-size: 16px; line-height: 1.35; padding-block: 16px; color: var(--ivory); }
   .mobile-menu nav a + a { border-top: 1px solid #333; }
   .hero { grid-template-columns: 1fr; gap: 44px; padding-block: 50px 30px; }
   h1 { font-size: clamp(3.5rem, 9vw, 5.4rem); }

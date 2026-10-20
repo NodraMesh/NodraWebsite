@@ -215,7 +215,8 @@ h3 { font-family: var(--font-sans); font-size: 23px; font-weight: 560; line-heig
   .development-layout { gap: 54px; }
 }
 @media (max-width: 800px) {
-  .site-header { min-height: 80px; z-index: 20; }
+  body > .site-header { min-height: 80px; z-index: 50; }
+  body > main { z-index: 1; }
   .desktop-nav, .header-action { display: none; }
   .mobile-menu { display: block; position: relative; z-index: 21; }
   .mobile-menu summary { cursor: pointer; list-style: none; font-size: 14px; padding: 14px 0 14px 20px; display: flex; align-items: center; gap: 20px; }

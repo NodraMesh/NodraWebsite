@@ -154,20 +154,51 @@
             <h3>Готовый узел Nodra.<br>Без ручной настройки.</h3>
             <p>Для личного использования. Вы получаете совместимое устройство с установленной Nodra Firmware — без самостоятельной сборки, компиляции и прошивки.</p>
           </div>
-          <figure class="techo-schematic" aria-label="Схематичный узел Nodra на базе форм-фактора T-Echo">
+          <figure class="techo-schematic" aria-label="Схематичный узел Nodra в форм-факторе T-Echo">
             <svg viewBox="0 0 580 420">
               <defs><filter id="deviceGlow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
               <g class="schematic-grid"><path d="M60 70H520M60 130H520M60 190H520M60 250H520M60 310H520M120 35V375M200 35V375M280 35V375M360 35V375M440 35V375"/></g>
               <g class="techo-outline" filter="url(#deviceGlow)">
-                <path d="M225 160v-85c0-16 10-28 24-28h8c14 0 24 12 24 28v85"/>
-                <rect x="165" y="150" width="230" height="205" rx="24"/>
-                <rect x="220" y="184" width="120" height="48" rx="8"/>
-                <rect x="215" y="255" width="130" height="68" rx="7"/>
-                <circle cx="195" cy="180" r="7"/><circle cx="365" cy="180" r="7"/><circle cx="195" cy="325" r="7"/><circle cx="365" cy="325" r="7"/>
-                <path d="M150 210h15v58h-15M395 220h14v42h-14"/>
+                <!-- antenna and its wider base -->
+                <path d="M342 150V70c0-11 7-18 17-18h8c10 0 17 7 17 18v80"/>
+                <path d="M332 150h62l-8 15h-46z"/>
+                <!-- stepped T-Echo body: upper display module on the right, larger lower body -->
+                <path d="M183 224
+                         Q183 208 199 208
+                         H285
+                         Q300 208 300 193
+                         V174
+                         Q300 160 314 160
+                         H405
+                         Q420 160 420 175
+                         V208
+                         H431
+                         Q446 208 446 224
+                         V354
+                         Q446 370 430 370
+                         H199
+                         Q183 370 183 354
+                         Z"/>
+                <!-- top black status display -->
+                <rect x="315" y="177" width="86" height="38" rx="5"/>
+                <!-- main e-ink display -->
+                <rect x="245" y="258" width="135" height="78" rx="7"/>
+                <!-- corner fasteners characteristic of the enclosure -->
+                <circle cx="219" cy="242" r="8"/>
+                <circle cx="411" cy="242" r="8"/>
+                <circle cx="219" cy="346" r="8"/>
+                <circle cx="411" cy="346" r="8"/>
+                <!-- small indicators and side controls -->
+                <circle cx="401" cy="295" r="3"/>
+                <circle cx="414" cy="295" r="3"/>
+                <path d="M176 262h7v45h-7M446 247h8v38h-8"/>
               </g>
-              <g class="schematic-callout"><path d="M82 80h115l31 17"/><text x="82" y="70">АНТЕННА</text><path d="M80 300h88"/><text x="80" y="290">ГОТОВЫЙ УЗЕЛ NODRA</text><path d="M395 205h92"/><text x="420" y="194">T-ECHO / NODE</text></g>
-              <g class="schematic-orbit"><ellipse cx="280" cy="260" rx="205" ry="120"/><ellipse cx="280" cy="260" rx="165" ry="92"/></g>
+              <g class="schematic-callout">
+                <path d="M82 78h205l52 18"/><text x="82" y="68">АНТЕННА</text>
+                <path d="M78 330h105"/><text x="78" y="319">ГОТОВЫЙ УЗЕЛ NODRA</text>
+                <path d="M420 188h82"/><text x="438" y="178">T-ECHO / NODE</text>
+              </g>
+              <g class="schematic-orbit"><ellipse cx="315" cy="270" rx="215" ry="122"/><ellipse cx="315" cy="270" rx="174" ry="94"/></g>
             </svg>
           </figure>
         </div>

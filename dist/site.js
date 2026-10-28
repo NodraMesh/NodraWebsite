@@ -11,3 +11,17 @@ if(hardwarePreorderLink){
   if(isMobileDevice){hardwarePreorderLink.href=hardwarePreorderLink.dataset.mobileHref;hardwarePreorderLink.removeAttribute('target');hardwarePreorderLink.removeAttribute('rel')}
   else{hardwarePreorderLink.href=hardwarePreorderLink.dataset.desktopHref}
 }
+const downloadMenu=document.querySelector('.download-menu');
+if(downloadMenu){
+  document.addEventListener('click',e=>{
+    if(downloadMenu.open&&!downloadMenu.contains(e.target)){
+      downloadMenu.open=false;
+    }
+  });
+  document.addEventListener('keydown',e=>{
+    if(e.key==='Escape'&&downloadMenu.open){
+      downloadMenu.open=false;
+      downloadMenu.querySelector('summary')?.focus();
+    }
+  });
+}

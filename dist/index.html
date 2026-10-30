@@ -30,21 +30,21 @@
   <header class="site-header wrap">
     <a class="wordmark" href="#" aria-label="Nodra — главная"><img class="brand-mark" src="./logo.svg" alt="Nodra"></a>
     <nav class="desktop-nav" aria-label="Основная навигация">
+      <a href="#news">Новости</a>
       <a href="#idea">Идея</a>
       <a href="#how-it-works">Как это работает</a>
       <a href="#hardware">Оборудование</a>
       <a href="#development">Разработка</a>
-      <a href="#news">Новости</a>
     </nav>
     <a class="header-action" href="#development">Знакомство с Nodra <svg class="icon"><use href="#arrow-up"/></svg></a>
     <details class="mobile-menu">
       <summary>Меню <span aria-hidden="true">+</span></summary>
       <nav aria-label="Мобильная навигация">
+        <a href="#news">Новости</a>
         <a href="#idea">Идея</a>
         <a href="#how-it-works">Как это работает</a>
         <a href="#hardware">Оборудование</a>
         <a href="#development">Разработка</a>
-      <a href="#news">Новости</a>
       </nav>
     </details>
   </header>
@@ -121,10 +121,57 @@
       </div>
     </section>
 
+    <section class="section news-section" id="news" aria-labelledby="news-title">
+      <div class="wrap">
+        <div class="news-heading">
+          <div>
+            <p class="eyebrow">01 / НОВОСТИ</p>
+            <h2 id="news-title">Новости Nodra<span class="blue-text">.</span></h2>
+            <p class="section-intro">Обновления, релизы и события проекта — коротко о главном.</p>
+          </div>
+          <div class="news-controls" aria-label="Листать новости">
+            <button type="button" class="news-arrow news-arrow-prev" data-news-direction="-1" aria-label="Предыдущая новость" aria-controls="news-track" disabled>
+              <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg>
+            </button>
+            <button type="button" class="news-arrow" data-news-direction="1" aria-label="Следующая новость" aria-controls="news-track">
+              <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="news-track" id="news-track" role="region" aria-roledescription="карусель" aria-label="Новости Nodra" tabindex="0">
+          <article class="news-card" aria-labelledby="news-card-1">
+            <div class="news-card-meta"><time datetime="2026-10-30">30 октября 2026</time><span>Обновление</span></div>
+            <div class="news-card-content">
+              <p class="news-card-version">NODRA / 1.4.3</p>
+              <h3 id="news-card-1">Новый облик Nodra</h3>
+              <p>В версии 1.4.3 появился обновлённый интерфейс. Меньше футуристичных эффектов, больше минимализма и акцента на приватности. Переработаны обе темы, навигация и чаты.</p>
+            </div>
+          </article>
+          <article class="news-card" aria-labelledby="news-card-2">
+            <div class="news-card-meta"><time datetime="2026-10-29">29 октября 2026</time><span>Релиз</span></div>
+            <div class="news-card-content">
+              <p class="news-card-version">NODRA / 1.4.3</p>
+              <h3 id="news-card-2">Версия 1.4.3 вышла</h3>
+              <p>Поиск устройств и обновление чатов стали автоматическими. Улучшены подключение и фоновая работа mesh-сети, появились уведомления о сообщениях с настройкой в приложении.</p>
+            </div>
+          </article>
+          <article class="news-card" aria-labelledby="news-card-3">
+            <div class="news-card-meta"><time datetime="2026-10-26">26 октября 2026</time><span>Событие</span></div>
+            <div class="news-card-content">
+              <p class="news-card-version">NODRA / ANDROID</p>
+              <h3 id="news-card-3">Первые публичные сборки</h3>
+              <p>Мы опубликовали Nodra 1.4.2 — первый стабильный Android-релиз в официальном репозитории загрузок. Следующим шагом стало масштабное обновление 1.4.3.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section class="section dark-section" id="idea" aria-labelledby="idea-title">
       <div class="wrap">
         <div class="section-heading">
-          <p class="eyebrow section-index">01 / ИДЕЯ</p>
+          <p class="eyebrow section-index">02 / ИДЕЯ</p>
           <div><h2 id="idea-title">Ближе друг к другу.<br><span class="muted-word">Дальше от ограничений.</span></h2><p class="section-intro">За городом, в дороге или там, где заканчивается привычная сеть. Идея Nodra проста: дать небольшим устройствам возможность передавать сообщения друг через друга.</p></div>
         </div>
         <div class="features">
@@ -138,7 +185,7 @@
     <section class="section how-section" id="how-it-works" aria-labelledby="how-title">
       <div class="wrap">
         <div class="how-head">
-          <div><p class="eyebrow"><span class="small-line"></span> 02 / КАК ЭТО РАБОТАЕТ</p><h2 id="how-title">У сообщения<br>есть свой маршрут.</h2><p class="section-intro">Сообщение проходит через независимые узлы Nodra. Если часть пути недоступна, сеть может продолжить передачу через другой маршрут.</p></div>
+          <div><p class="eyebrow"><span class="small-line"></span> 03 / КАК ЭТО РАБОТАЕТ</p><h2 id="how-title">У сообщения<br>есть свой маршрут.</h2><p class="section-intro">Сообщение проходит через независимые узлы Nodra. Если часть пути недоступна, сеть может продолжить передачу через другой маршрут.</p></div>
           <figure class="neon-map route-visual">
             <svg viewBox="0 0 760 380" role="img" aria-label="Маршрут сообщения через mesh-сеть">
               <defs><filter id="routeGlow" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter><path id="routeMain" d="M75 225 C170 145 225 150 315 205 S445 295 545 210 S650 150 700 185"/></defs>
@@ -166,7 +213,7 @@
       <div class="wrap">
         <div class="hardware-hero hardware-hero-compact">
           <div class="hardware-copy">
-            <p class="eyebrow"><span class="small-line"></span> 03 / ОБОРУДОВАНИЕ</p>
+            <p class="eyebrow"><span class="small-line"></span> 04 / ОБОРУДОВАНИЕ</p>
             <h2 id="hardware-title">Nodra Hardware</h2>
             <p class="hardware-preorder">Предзаказ · EARLY ACCESS / 01</p>
             <div class="hardware-headline-row">
@@ -213,57 +260,12 @@
 
     <section class="section development-section" id="development" aria-labelledby="development-title">
       <div class="wrap development-layout">
-        <div><p class="eyebrow">04 / НАЧАЛО ПУТИ</p><h2 id="development-title">Большая сеть.<br>С первого узла<span class="blue-text">.</span></h2><p class="development-copy">Nodra развивается. Сейчас проект на этапе MVP: мы работаем над обменом сообщениями и логикой их передачи между узлами.</p><a class="button button-ivory" href="#project-status">Где мы сейчас <svg class="icon"><use href="#arrow"/></svg></a></div>
+        <div><p class="eyebrow">05 / НАЧАЛО ПУТИ</p><h2 id="development-title">Большая сеть.<br>С первого узла<span class="blue-text">.</span></h2><p class="development-copy">Nodra развивается. Сейчас проект на этапе MVP: мы работаем над обменом сообщениями и логикой их передачи между узлами.</p><a class="button button-ivory" href="#project-status">Где мы сейчас <svg class="icon"><use href="#arrow"/></svg></a></div>
         <aside class="status-panel" id="project-status" aria-labelledby="status-title"><div class="status-heading"><span class="eyebrow">СТАТУС ПРОЕКТА</span><span class="status-tag">MVP</span></div><h3 id="status-title">Шаг за шагом.<br>Узел за узлом.</h3><p>Первая цель — надёжно провести сообщение от отправителя к получателю.</p><dl><div><dt>Обмен сообщениями</dt><dd>Готово</dd></div><div><dt>Передача между узлами</dt><dd>ОБТ</dd></div><div><dt>Готовый релиз</dt><dd>ОБТ</dd></div></dl><p class="status-note">Готовая прошивка и инструкции появятся по мере готовности проекта.</p></aside>
       </div>
     </section>
 
-    <section class="section news-section" id="news" aria-labelledby="news-title">
-      <div class="wrap">
-        <div class="news-heading">
-          <div>
-            <p class="eyebrow">05 / НОВОСТИ</p>
-            <h2 id="news-title">Новости Nodra<span class="blue-text">.</span></h2>
-            <p class="section-intro">Обновления, релизы и события проекта — коротко о главном.</p>
-          </div>
-          <div class="news-controls" aria-label="Листать новости">
-            <button type="button" class="news-arrow news-arrow-prev" data-news-direction="-1" aria-label="Предыдущая новость" aria-controls="news-track" disabled>
-              <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg>
-            </button>
-            <button type="button" class="news-arrow" data-news-direction="1" aria-label="Следующая новость" aria-controls="news-track">
-              <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg>
-            </button>
-          </div>
-        </div>
 
-        <div class="news-track" id="news-track" role="region" aria-roledescription="карусель" aria-label="Новости Nodra" tabindex="0">
-          <article class="news-card" aria-labelledby="news-card-1">
-            <div class="news-card-meta"><time datetime="2026-10-30">30 октября 2026</time><span>Обновление</span></div>
-            <div class="news-card-content">
-              <p class="news-card-version">NODRA / 1.4.3</p>
-              <h3 id="news-card-1">Новый облик Nodra</h3>
-              <p>В версии 1.4.3 появился обновлённый интерфейс. Меньше футуристичных эффектов, больше минимализма и акцента на приватности. Переработаны обе темы, навигация и чаты.</p>
-            </div>
-          </article>
-          <article class="news-card" aria-labelledby="news-card-2">
-            <div class="news-card-meta"><time datetime="2026-10-29">29 октября 2026</time><span>Релиз</span></div>
-            <div class="news-card-content">
-              <p class="news-card-version">NODRA / 1.4.3</p>
-              <h3 id="news-card-2">Версия 1.4.3 вышла</h3>
-              <p>Поиск устройств и обновление чатов стали автоматическими. Улучшены подключение и фоновая работа mesh-сети, появились уведомления о сообщениях с настройкой в приложении.</p>
-            </div>
-          </article>
-          <article class="news-card" aria-labelledby="news-card-3">
-            <div class="news-card-meta"><time datetime="2026-10-26">26 октября 2026</time><span>Событие</span></div>
-            <div class="news-card-content">
-              <p class="news-card-version">NODRA / ANDROID</p>
-              <h3 id="news-card-3">Первые публичные сборки</h3>
-              <p>Мы опубликовали Nodra 1.4.2 — первый стабильный Android-релиз в официальном репозитории загрузок. Следующим шагом стало масштабное обновление 1.4.3.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
   </main>
 
   <footer class="site-footer">

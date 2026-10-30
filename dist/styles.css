@@ -71,10 +71,10 @@
 .news-track{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:2px;overscroll-behavior-inline:contain;scrollbar-width:none;padding:4px 2px 6px;scroll-behavior:smooth}
 .news-track::-webkit-scrollbar{display:none}
 .news-track:focus-visible{outline:2px solid #bdbdbd;outline-offset:4px}
-.news-card{display:flex;flex:0 0 clamp(340px,41%,470px);flex-direction:column;justify-content:space-between;aspect-ratio:1/1;min-width:0;padding:28px;border:1px solid #343434;border-radius:12px;background:#0e0e0e;scroll-snap-align:start;scroll-snap-stop:always}
+.news-card{display:flex;flex:0 0 clamp(340px,41%,470px);flex-direction:column;justify-content:flex-start;aspect-ratio:1/1;min-width:0;padding:28px;border:1px solid #343434;border-radius:12px;background:#0e0e0e;scroll-snap-align:start;scroll-snap-stop:always}
 .news-card-meta{display:flex;align-items:center;justify-content:space-between;gap:10px;color:#999;font:11px/1.5 var(--font-mono)}
 .news-card-meta span{border:1px solid #444;border-radius:5px;padding:5px 8px;color:#ddd;white-space:nowrap}
-.news-card-content{margin-top:auto}
+.news-card-content{margin-top:30px}
 .news-card-version{font:11px/1.5 var(--font-mono);letter-spacing:.08em;color:#797979}
 .news-card h3{margin-top:12px;font-size:clamp(24px,2.6vw,34px);font-weight:620;line-height:1.12;letter-spacing:-.04em}
 .news-card-content>p:last-child{margin-top:17px;color:#a0a0a0;font-size:14px;line-height:1.65}

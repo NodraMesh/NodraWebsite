@@ -81,3 +81,15 @@
 @media(max-width:800px){.news-card{flex-basis:clamp(310px,65%,440px)}}
 @media(max-width:540px){.news-heading{align-items:flex-end;gap:12px;margin-bottom:24px}.news-heading .section-intro{font-size:13px}.news-controls{gap:7px}.news-arrow{width:40px;height:40px}.news-arrow .icon{width:18px;height:18px}.news-card{flex-basis:min(85vw,350px);padding:21px}.news-card-meta{font-size:10px}.news-card-meta span{padding:4px 6px}.news-card h3{font-size:clamp(21px,6vw,27px)}.news-card-content>p:last-child{margin-top:12px;font-size:12.5px;line-height:1.52}.news-track{gap:12px}}
 @media(prefers-reduced-motion:reduce){.news-track{scroll-behavior:auto}}
+
+/* Temporary hardware section, replacing the preorder offering. */
+.hardware-pause-section{background:radial-gradient(circle at 75% 35%,#141414 0,transparent 40%),#080808}
+.hardware-pause-layout{display:grid;grid-template-columns:1fr 1.08fr;align-items:center;gap:54px;min-height:410px}
+.hardware-pause-kicker{margin-top:32px;font:11px/1.6 var(--font-mono);letter-spacing:.12em;color:#8c8c8c}
+.hardware-pause-copy h2{margin-top:17px;font-size:clamp(3rem,5.1vw,5.6rem)}
+.hardware-pause-description{max-width:470px;margin-top:24px;color:#979797;font-size:15px;line-height:1.75}
+.hardware-pause-visual{margin:0;min-width:0}
+.hardware-pause-visual svg{display:block;width:100%;height:auto}
+.hardware-pause-visual figcaption{margin-top:8px;padding-top:12px;border-top:1px solid #303030;text-align:right;color:#747474;font:10px/1.6 var(--font-mono);letter-spacing:.1em}
+@media(max-width:800px){.hardware-pause-layout{grid-template-columns:1fr;gap:22px;min-height:0}.hardware-pause-visual{max-width:650px;margin-inline:auto;width:100%}}
+@media(max-width:540px){.hardware-pause-kicker{margin-top:23px}.hardware-pause-copy h2{font-size:clamp(2.7rem,11.5vw,4rem)}.hardware-pause-description{margin-top:18px;font-size:14px}.hardware-pause-visual{margin-top:4px}}

@@ -72,7 +72,7 @@
       const n=nodeBy(packetState.current);
       if(n)positionPacket(n.x,n.y);
     }
-    count.textContent=nodes.length+" узлов";
+    count.textContent=nodes.length+" "+(nodes.length%10===1&&nodes.length%100!==11?"узел":nodes.length%10>=2&&nodes.length%10<=4&&(nodes.length%100<12||nodes.length%100>14)?"узла":"узлов");
     stats.textContent=edges+" связей · "+(path?"есть маршрут":"нет маршрута");
   }
   function render(){
@@ -208,7 +208,7 @@
   }
   function addRelay(x,y){
     if(nodes.length>=MAX){tell("Достигнут лимит 16 узлов. Удалите один, чтобы добавить другой.","waiting");return}
-    const candidate={id:String.fromCharCode(65+index),x:clamp(x,8,92),y:clamp(y,10,90)};
+    const candidate={id:index<26?String.fromCharCode(65+index):"R"+(index-25),x:clamp(x,8,92),y:clamp(y,10,90)};
     if(nodes.some(n=>dist(n,candidate)<55)){tell("Слишком близко к другому узлу. Выберите свободное место.");return}
     index++;nodes.push(candidate);attach(candidate);refreshSelects();render();
     tell("Ретранслятор "+candidate.id+" добавлен. Можно разместить следующий.");
@@ -231,7 +231,7 @@
     index=2;
     const extras=1+Math.floor(Math.random()*3);
     for(let i=0;i<extras;i++)for(let attempt=0;attempt<75;attempt++){
-      const n={id:String.fromCharCode(65+index),x:rand(22,78),y:rand(14,86)};
+      const n={id:index<26?String.fromCharCode(65+index):"R"+(index-25),x:rand(22,78),y:rand(14,86)};
       if(nodes.every(other=>dist(other,n)>65)){nodes.push(n);index++;break}
     }
     for(const n of nodes)attach(n);

@@ -11,7 +11,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400..700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./playground.css">
   <script src="./site.js" defer></script>
+  <script src="./playground.js" defer></script>
 </head>
 <body>
   <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
@@ -33,6 +35,7 @@
       <a href="#news">Новости</a>
       <a href="#idea">Идея</a>
       <a href="#how-it-works">Как это работает</a>
+      <a href="#playground">Playground</a>
       <a href="#hardware">Оборудование</a>
       <a href="#development">Разработка</a>
     </nav>
@@ -43,7 +46,8 @@
         <a href="#news">Новости</a>
         <a href="#idea">Идея</a>
         <a href="#how-it-works">Как это работает</a>
-        <a href="#hardware">Оборудование</a>
+        <a href="#playground">Playground</a>
+      <a href="#hardware">Оборудование</a>
         <a href="#development">Разработка</a>
       </nav>
     </details>
@@ -206,6 +210,52 @@
           <article><span>03</span><h3>Разговор продолжается</h3><p>Устройство получателя принимает сообщение. Так несколько отдельных узлов становятся сетью.</p><div class="mini-route step-three"><i></i><i></i><i></i></div></article>
         </div>
         <p class="technical-note">Схема показывает принцип mesh-связи. Возможность и дальность передачи зависят от оборудования, рельефа и расположения узлов.</p>
+      </div>
+    </section>
+
+    <section class="section playground-section" id="playground" aria-labelledby="playground-title">
+      <div class="wrap playground-layout">
+        <div class="playground-intro">
+          <p class="eyebrow">ИНТЕРАКТИВНАЯ ДЕМОНСТРАЦИЯ / MESH</p>
+          <h2 id="playground-title">Mesh<br>Playground<span>.</span></h2>
+          <p>Перемещайте узлы и отправляйте сообщения. Посмотрите, как пакет находит путь через промежуточные устройства — или ждёт, пока связь появится снова.</p>
+          <ol class="playground-steps">
+            <li>Выберите отправителя и получателя.</li>
+            <li>Нажмите «Отправить пакет».</li>
+            <li>Перетащите узел и измените маршрут.</li>
+          </ol>
+          <p class="playground-footnote">Это браузерная симуляция принципа Mesh, а не реальная передача через Bluetooth или Wi-Fi.</p>
+        </div>
+        <div class="playground-shell" id="mesh-playground">
+          <div class="playground-topline">
+            <strong>Сеть из 6 узлов</strong>
+            <span>SIMULATION / LIVE</span>
+          </div>
+          <div class="playground-visual" id="mesh-stage" aria-label="Интерактивная схема Mesh-сети">
+            <svg class="playground-links" id="mesh-links" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"></svg>
+            <span class="playground-packet" id="mesh-packet" hidden aria-hidden="true"></span>
+            <p class="playground-guide">ПЕРЕТАСКИВАЙТЕ УЗЛЫ · МЕНЯЙТЕ МАРШРУТ</p>
+          </div>
+          <div class="playground-controls">
+            <div class="playground-control">
+              <label for="mesh-sender">Отправитель</label>
+              <select id="mesh-sender">
+                <option value="A">Узел A</option><option value="B">Узел B</option><option value="C">Узел C</option>
+                <option value="D">Узел D</option><option value="E">Узел E</option><option value="F">Узел F</option>
+              </select>
+            </div>
+            <div class="playground-control">
+              <label for="mesh-receiver">Получатель</label>
+              <select id="mesh-receiver">
+                <option value="A">Узел A</option><option value="B">Узел B</option><option value="C">Узел C</option>
+                <option value="D">Узел D</option><option value="E">Узел E</option><option value="F" selected>Узел F</option>
+              </select>
+            </div>
+            <button type="button" class="playground-send" id="mesh-send">Отправить пакет</button>
+            <button type="button" class="playground-reset" id="mesh-reset">Сбросить</button>
+          </div>
+          <p class="playground-status" id="mesh-status" role="status" aria-live="polite">Сеть готова. Выберите узлы и отправьте пакет.</p>
+        </div>
       </div>
     </section>
 

@@ -218,43 +218,56 @@
         <div class="playground-intro">
           <p class="eyebrow">ИНТЕРАКТИВНАЯ ДЕМОНСТРАЦИЯ / MESH</p>
           <h2 id="playground-title">Mesh<br>Playground<span>.</span></h2>
-          <p>Перемещайте узлы и отправляйте сообщения. Посмотрите, как пакет находит путь через промежуточные устройства — или ждёт, пока связь появится снова.</p>
+          <p>Постройте собственную Mesh-сеть. Добавляйте ретрансляторы, меняйте расположение узлов и помогите пакету добраться до адресата без прямого соединения.</p>
           <ol class="playground-steps">
-            <li>Выберите отправителя и получателя.</li>
-            <li>Нажмите «Отправить пакет».</li>
-            <li>Перетащите узел и измените маршрут.</li>
+            <li>Выберите отправителя и получателя, отправьте пакет.</li>
+            <li>Если пакет застрял, добавьте ретранслятор на схему.</li>
+            <li>Разместите узлы в пределах радиуса связи — передача продолжится.</li>
           </ol>
-          <p class="playground-footnote">Это браузерная симуляция принципа Mesh, а не реальная передача через Bluetooth или Wi-Fi.</p>
+          <aside class="playground-legend" aria-label="Обозначения в Mesh Playground">
+            <h3>Обозначения и управление</h3>
+            <p>Каждый круг показывает зону действия узла. Линия соединяет устройства, которые могут передавать пакет друг другу.</p>
+            <ul>
+              <li><i class="mesh-key is-sender" aria-hidden="true"></i> Отправитель</li>
+              <li><i class="mesh-key is-recipient" aria-hidden="true"></i> Получатель</li>
+              <li><i class="mesh-key is-relay" aria-hidden="true"></i> Ретранслятор</li>
+              <li><i class="mesh-key is-coverage" aria-hidden="true"></i> Радиус связи</li>
+              <li><i class="mesh-key is-connection" aria-hidden="true"></i> Соединение</li>
+              <li><i class="mesh-key is-message" aria-hidden="true"></i> Пакет (жёлтый — ждёт)</li>
+            </ul>
+          </aside>
+          <p class="playground-footnote">Интерактивная симуляция принципа Mesh и Store &amp; Forward. Дальность условная; реальная передача через Bluetooth или Wi-Fi здесь не выполняется.</p>
         </div>
         <div class="playground-shell" id="mesh-playground">
           <div class="playground-topline">
-            <strong>Сеть из 6 узлов</strong>
-            <span>SIMULATION / LIVE</span>
+            <div>
+              <strong>Сеть Mesh Playground</strong>
+              <span class="playground-count" id="mesh-count">4 узла</span>
+            </div>
+            <span class="playground-stats" id="mesh-stats">Проверка маршрута</span>
           </div>
           <div class="playground-visual" id="mesh-stage" aria-label="Интерактивная схема Mesh-сети">
             <svg class="playground-links" id="mesh-links" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"></svg>
             <span class="playground-packet" id="mesh-packet" hidden aria-hidden="true"></span>
-            <p class="playground-guide">ПЕРЕТАСКИВАЙТЕ УЗЛЫ · МЕНЯЙТЕ МАРШРУТ</p>
+            <p class="playground-guide" id="mesh-guide">ПЕРЕТАСКИВАЙТЕ УЗЛЫ · МЕНЯЙТЕ МАРШРУТ</p>
           </div>
           <div class="playground-controls">
             <div class="playground-control">
               <label for="mesh-sender">Отправитель</label>
-              <select id="mesh-sender">
-                <option value="A">Узел A</option><option value="B">Узел B</option><option value="C">Узел C</option>
-                <option value="D">Узел D</option><option value="E">Узел E</option><option value="F">Узел F</option>
-              </select>
+              <select id="mesh-sender"><option value="A">Узел A</option></select>
             </div>
             <div class="playground-control">
               <label for="mesh-receiver">Получатель</label>
-              <select id="mesh-receiver">
-                <option value="A">Узел A</option><option value="B">Узел B</option><option value="C">Узел C</option>
-                <option value="D">Узел D</option><option value="E">Узел E</option><option value="F" selected>Узел F</option>
-              </select>
+              <select id="mesh-receiver"><option value="B">Узел B</option></select>
             </div>
             <button type="button" class="playground-send" id="mesh-send">Отправить пакет</button>
-            <button type="button" class="playground-reset" id="mesh-reset">Сбросить</button>
           </div>
-          <p class="playground-status" id="mesh-status" role="status" aria-live="polite">Сеть готова. Выберите узлы и отправьте пакет.</p>
+          <div class="playground-toolbar" role="group" aria-label="Изменение сети">
+            <button type="button" class="playground-tool" id="mesh-add" aria-pressed="false">+ Ретранслятор</button>
+            <button type="button" class="playground-tool" id="mesh-remove" aria-pressed="false">− Удалить</button>
+            <button type="button" class="playground-tool" id="mesh-random">Случайная сеть</button>
+          </div>
+          <p class="playground-status" id="mesh-status" role="status" aria-live="polite">Создаём случайную сеть…</p>
         </div>
       </div>
     </section>

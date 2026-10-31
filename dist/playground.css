@@ -14,7 +14,7 @@
 .playground-visual{position:relative;height:clamp(300px,32vw,405px);overflow:hidden;isolation:isolate;background:radial-gradient(ellipse at 46% 48%,#1c2a4a 0,#101828 42%,#090e19 87%)}
 .playground-visual:before{content:"";position:absolute;inset:0;pointer-events:none;z-index:-1;background-image:radial-gradient(#7095db42 1px,transparent 1px);background-size:24px 24px;mask-image:linear-gradient(to bottom,transparent,#000 20%,#000 80%,transparent)}
 .playground-links{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:visible}
-.playground-links line{stroke:#6e85b6;stroke-width:.28;stroke-dasharray:.7 .85;opacity:.62;vector-effect:non-scaling-stroke}
+.playground-links line{stroke:#6e85b6;stroke-width:1.4;stroke-dasharray:.7 .85;opacity:.62;vector-effect:non-scaling-stroke}
 .playground-links line.is-route{stroke:#8ec6ff;stroke-width:2.3;stroke-dasharray:none;opacity:.95;filter:drop-shadow(0 0 5px #5aaaff)}
 .playground-node{--node-color:#97a9e4;position:absolute;left:0;top:0;display:grid;place-items:center;transform:translate(-50%,-50%);width:52px;height:52px;border:1px solid var(--node-color);border-radius:50%;background:#121e37;color:#eef2ff;font:700 14px/1 var(--font-mono);box-shadow:0 0 0 7px #5c8ce612,0 0 25px #5a85ff24;cursor:grab;touch-action:none;user-select:none;transition:box-shadow .2s,border-color .2s;z-index:2}
 .playground-node:after{content:"";position:absolute;inset:10px;border:1px solid var(--node-color);border-radius:50%;opacity:.21;pointer-events:none}

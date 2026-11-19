@@ -30,12 +30,28 @@ html[data-theme="night-neon"] body::before{
   content:"";
   position:fixed;
   inset:0;
-  z-index:5;
+  z-index:0;
   pointer-events:none;
-  background:url("./night-neon-palms.svg") center center / cover no-repeat;
-  opacity:.44;
-  -webkit-mask-image:linear-gradient(90deg,#000 0%,#000 12%,transparent 27%,transparent 73%,#000 88%,#000 100%);
-  mask-image:linear-gradient(90deg,#000 0%,#000 12%,transparent 27%,transparent 73%,#000 88%,#000 100%);
+  background:url("./night-neon-palms.svg?v=2") center center / cover no-repeat;
+  opacity:.32;
+  filter:blur(3.2px);
+  -webkit-mask-image:linear-gradient(90deg,#000 0%,#000 8%,transparent 25%,transparent 75%,#000 92%,#000 100%);
+  mask-image:linear-gradient(90deg,#000 0%,#000 8%,transparent 25%,transparent 75%,#000 92%,#000 100%);
+}
+/* Artwork stays beneath text and the live animated mesh graphics. */
+html[data-theme="night-neon"] body>main,
+html[data-theme="night-neon"] body>.site-footer{position:relative;z-index:1;}
+html[data-theme="night-neon"] .hero{
+  background:radial-gradient(ellipse at 76% 38%,rgba(134,55,133,.08),transparent 62%);
+}
+html[data-theme="night-neon"] .hero-copy::before{
+  content:"";
+  position:absolute;
+  inset:-7% -4%;
+  z-index:-1;
+  pointer-events:none;
+  background:radial-gradient(ellipse at 27% 45%,rgba(9,6,18,.68),rgba(9,6,18,.28) 49%,transparent 79%);
+  filter:blur(24px);
 }
 
 /* Keep menus and actions above the decorative layer. */
@@ -276,12 +292,17 @@ html[data-theme="night-neon"] .playground-count{color:#eac6e2;}
 
 /* Keep palms decorative and content legible on narrow screens. */
 @media(max-width:1100px){
-  html[data-theme="night-neon"] body::before{opacity:.31;}
+  html[data-theme="night-neon"] body::before{opacity:.23;filter:blur(3.6px);}
 }
 @media(max-width:700px){
-  html[data-theme="night-neon"] body::before{opacity:.13;mask-image:none;-webkit-mask-image:none;}
+  html[data-theme="night-neon"] body::before{
+    opacity:.13;
+    filter:blur(4px);
+    -webkit-mask-image:linear-gradient(90deg,#000,transparent 35%,transparent 65%,#000);
+    mask-image:linear-gradient(90deg,#000,transparent 35%,transparent 65%,#000);
+  }
   html[data-theme="night-neon"] .hero{
-    background:radial-gradient(circle at 85% 15%,rgba(172,73,145,.085),transparent 52%);
+    background:radial-gradient(circle at 85% 15%,rgba(172,73,145,.075),transparent 52%);
   }
 }
 @media(prefers-reduced-motion:reduce){

@@ -21,7 +21,7 @@ The query parameter is not saved to local storage and does not affect other visi
 ## What changed
 
 - `dist/night-neon.css` adds scoped styling for dark violet / dusty pink UI, hero / relay animations, news, hardware, and Mesh Playground.
-- `dist/night-neon-palms.svg` provides vector palm linework fixed at the sides of the viewport with `pointer-events:none`.
+- `dist/night-neon-palms.svg` provides broad filled palm fronds fixed at the sides of the viewport, with soft blur and reduced opacity with `pointer-events:none`.
 - `dist/index.html` adds one theme attribute, stylesheet include, and the optional preview override.
 
 `dist/styles.css`, `dist/playground.css`, `dist/site.js`, `dist/playground.js`, and Nodra application source code are not modified.
@@ -36,4 +36,4 @@ To fully discard the new theme files, revert the commit that introduced Night Ne
 
 ## Accessibility
 
-Palms never intercept clicks. The overlay is softened on tablets / mobile. Existing reduced-motion behavior is preserved. No new animations or dependencies are added.
+Palms never intercept clicks and remain behind all main content. The overlay is softened on tablets / mobile. Existing reduced-motion behavior is preserved. No new animations or dependencies are added.

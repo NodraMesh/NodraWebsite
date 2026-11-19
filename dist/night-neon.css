@@ -32,9 +32,9 @@ html[data-theme="night-neon"] body::before{
   inset:0;
   z-index:0;
   pointer-events:none;
-  background:url("./night-neon-palms.svg?v=2") center center / cover no-repeat;
-  opacity:.32;
-  filter:blur(3.2px);
+  background:url("./night-neon-palms.svg?v=3") center center / cover no-repeat;
+  opacity:.24;
+  filter:blur(4.6px);
   -webkit-mask-image:linear-gradient(90deg,#000 0%,#000 8%,transparent 25%,transparent 75%,#000 92%,#000 100%);
   mask-image:linear-gradient(90deg,#000 0%,#000 8%,transparent 25%,transparent 75%,#000 92%,#000 100%);
 }
@@ -292,12 +292,12 @@ html[data-theme="night-neon"] .playground-count{color:#eac6e2;}
 
 /* Keep palms decorative and content legible on narrow screens. */
 @media(max-width:1100px){
-  html[data-theme="night-neon"] body::before{opacity:.23;filter:blur(3.6px);}
+  html[data-theme="night-neon"] body::before{opacity:.18;filter:blur(4.8px);}
 }
 @media(max-width:700px){
   html[data-theme="night-neon"] body::before{
-    opacity:.13;
-    filter:blur(4px);
+    opacity:.10;
+    filter:blur(5px);
     -webkit-mask-image:linear-gradient(90deg,#000,transparent 35%,transparent 65%,#000);
     mask-image:linear-gradient(90deg,#000,transparent 35%,transparent 65%,#000);
   }

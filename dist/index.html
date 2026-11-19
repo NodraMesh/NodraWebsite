@@ -1,5 +1,6 @@
 <!doctype html>
-<html lang="ru">
+<!-- THEME SWITCH: data-theme="classic" restores the original monochrome look. -->
+<html lang="ru" data-theme="night-neon">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,6 +13,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400..700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles.css">
   <link rel="stylesheet" href="./playground.css">
+  <!-- Night Neon is an additive override: original styles.css and playground.css stay untouched. -->
+  <link rel="stylesheet" href="./night-neon.css?v=1">
+  <script>/* Optional preview: ?theme=classic or ?theme=night-neon (does not persist). */
+    { const t = new URLSearchParams(location.search).get("theme");
+      if (t === "classic" || t === "night-neon") document.documentElement.dataset.theme = t; }
+  </script>
   <script src="./site.js" defer></script>
   <script src="./playground.js" defer></script>
 </head>

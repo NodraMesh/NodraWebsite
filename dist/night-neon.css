@@ -1,0 +1,290 @@
+/*
+ * NODRA / NIGHT NEON  —  additive visual skin
+ * All overrides are strictly scoped to html[data-theme="night-neon"].
+ * To restore the original look, change that attribute to "classic" in index.html.
+ * Per-visit previews: ?theme=classic and ?theme=night-neon.
+ * Original styles.css, playground.css, site.js and playground.js are untouched.
+ */
+html[data-theme="night-neon"]{
+  color-scheme:dark;
+  --black:#090711;
+  --black2:#100a1a;
+  --panel:#15101f;
+  --panel2:#1a1227;
+  --ivory:#fbf4fa;
+  --muted:#b2a1ba;
+  --blue:#e7a0d0;
+  --blue2:#ffd1e9;
+  --line:#39253e;
+}
+
+html[data-theme="night-neon"] body{
+  background:
+    radial-gradient(ellipse at 51% 4%, rgba(134,66,142,.15), transparent 34%),
+    linear-gradient(180deg,#080610 0%,#0c0817 49%,#080610 100%);
+  color:var(--ivory);
+}
+
+/* Fixed illustrated palms — not tied to scroll position, no interactions blocked. */
+html[data-theme="night-neon"] body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:5;
+  pointer-events:none;
+  background:url("./night-neon-palms.svg") center center / cover no-repeat;
+  opacity:.44;
+  -webkit-mask-image:linear-gradient(90deg,#000 0%,#000 12%,transparent 27%,transparent 73%,#000 88%,#000 100%);
+  mask-image:linear-gradient(90deg,#000 0%,#000 12%,transparent 27%,transparent 73%,#000 88%,#000 100%);
+}
+
+/* Keep menus and actions above the decorative layer. */
+html[data-theme="night-neon"] .site-header{z-index:50;border-bottom-color:#402a46;}
+html[data-theme="night-neon"] .site-footer{background:#090610;border-top-color:#3d2a42;}
+html[data-theme="night-neon"] .section{border-top-color:#281a30;}
+html[data-theme="night-neon"] .dark-section{background:linear-gradient(180deg,rgba(13,8,23,.92),rgba(17,10,29,.91));}
+html[data-theme="night-neon"] .how-section{
+  background:radial-gradient(circle at 71% 34%,rgba(120,46,126,.13),transparent 43%),#0a0713;
+}
+html[data-theme="night-neon"] .development-section{
+  background:radial-gradient(circle at 16% 27%,rgba(135,51,112,.13),transparent 39%),#0a0713;
+}
+html[data-theme="night-neon"] .hardware-section{
+  background:radial-gradient(circle at 75% 16%,rgba(151,57,122,.13),transparent 41%),#090711;
+}
+html[data-theme="night-neon"] .hardware-pause-section{
+  background:radial-gradient(circle at 74% 35%,rgba(144,62,151,.11),transparent 43%),#0a0713;
+}
+html[data-theme="night-neon"] .news-section{background:#0c0815;}
+
+html[data-theme="night-neon"] .desktop-nav a:hover,
+html[data-theme="night-neon"] .footer-telegram:hover,
+html[data-theme="night-neon"] .footer-top:hover,
+html[data-theme="night-neon"] .text-link:hover{color:#ffc6ea;}
+html[data-theme="night-neon"] .header-action{
+  border-color:#654063;
+  background:rgba(63,27,61,.16);
+}
+html[data-theme="night-neon"] .header-action:hover{
+  border-color:#d98ebf;
+  background:rgba(113,51,105,.18);
+}
+html[data-theme="night-neon"] .small-line{
+  background:#f1a7d3;
+  box-shadow:0 0 16px rgba(246,139,212,.48);
+}
+html[data-theme="night-neon"] .eyebrow,
+html[data-theme="night-neon"] .hardware-kicker{color:#d8b0d4;}
+html[data-theme="night-neon"] .muted-word{color:#ca91c8;}
+html[data-theme="night-neon"] .hero-description{color:#d0bfce;}
+html[data-theme="night-neon"] .button-ivory{
+  background:linear-gradient(112deg,#f9c3e0 0%,#d9a5e9 100%);
+  color:#190d20;
+  box-shadow:0 10px 34px rgba(153,61,143,.18);
+}
+html[data-theme="night-neon"] .button-ivory:hover{
+  background:linear-gradient(112deg,#ffe0ed,#ecc1f4);
+}
+html[data-theme="night-neon"] .download-menu[open]>summary{
+  background:linear-gradient(112deg,#ffe0ed,#ecc1f4);
+}
+html[data-theme="night-neon"] .download-options{
+  border-color:#66416d;
+  background:rgba(20,12,31,.98);
+}
+html[data-theme="night-neon"] .download-option:hover{background:#2a1835;}
+html[data-theme="night-neon"] .text-link{border-bottom-color:#df91c8;}
+html[data-theme="night-neon"] .hero-note{color:#a78eac;}
+
+/* Hero & animated route graphics: preserve their geometry and timing. */
+html[data-theme="night-neon"] .hero-map::before,
+html[data-theme="night-neon"] .route-visual::before{
+  background:radial-gradient(ellipse at center,rgba(186,70,151,.24),transparent 68%);
+}
+html[data-theme="night-neon"] .topo-lines path{stroke:#744971;opacity:.50;}
+html[data-theme="night-neon"] .network-lines{stroke:#d086b8;opacity:.83;}
+html[data-theme="night-neon"] .network-lines.single{stroke:#bb75a8;}
+html[data-theme="night-neon"] .route-base{stroke:#d48dbd;opacity:.58;}
+html[data-theme="night-neon"] .route-dashes{stroke:#ffd1eb;}
+html[data-theme="night-neon"] .nodes circle{
+  fill:#ffe1f1;
+  stroke:#eeb4dc;
+  filter:drop-shadow(0 0 9px rgba(247,146,214,.65));
+}
+html[data-theme="night-neon"] .node-pulse circle{stroke:#e89bcc;}
+html[data-theme="night-neon"] .packet{
+  fill:#ffe2f2;
+  stroke:#ffeaf5;
+  filter:drop-shadow(0 0 11px rgba(244,132,207,.55));
+}
+html[data-theme="night-neon"] .packet-tail{fill:#d98fc1;}
+html[data-theme="night-neon"] .failed circle{fill:#1c1325;stroke:#e4a3ce;}
+html[data-theme="night-neon"] .failed path{stroke:#e4a3ce;}
+html[data-theme="night-neon"] .map-label rect{fill:rgba(24,13,35,.94);stroke:#82527b;}
+html[data-theme="night-neon"] .map-label text{fill:#e8c3e0;}
+html[data-theme="night-neon"] .hero-map figcaption{
+  border-top-color:#4b2d4e;
+  color:#b898bd;
+}
+html[data-theme="night-neon"] .feature-icon{stroke:#e6a1cf;}
+html[data-theme="night-neon"] .hero-features{
+  border-top-color:#3b2641;border-bottom-color:#3b2641;
+}
+html[data-theme="night-neon"] .hero-features>div{border-right-color:#3b2641;}
+html[data-theme="night-neon"] .feature{
+  border-color:#4c3150;
+  background:linear-gradient(147deg,rgba(32,17,40,.96),rgba(13,8,21,.97));
+}
+html[data-theme="night-neon"] .feature:hover{border-color:#a765a0;}
+html[data-theme="night-neon"] .mini-route::before{border-top-color:#80547f;}
+html[data-theme="night-neon"] .mini-route i{border-color:#b983af;background:#170e22;}
+html[data-theme="night-neon"] .mini-route.step-one i:nth-child(1),
+html[data-theme="night-neon"] .mini-route.step-two i:nth-child(2),
+html[data-theme="night-neon"] .mini-route.step-three i:nth-child(3){
+  background:#ffcfeb;border-color:#ffe0ef;
+  box-shadow:0 0 18px rgba(250,136,207,.56);
+}
+html[data-theme="night-neon"] .steps-grid article{
+  background:#120c1c;border-color:#4b3150;
+}
+html[data-theme="night-neon"] .steps-grid>article>span{color:#f0b1da;}
+
+/* News, hardware, and status content: subtle coordinated accents. */
+html[data-theme="night-neon"] .news-card{
+  background:linear-gradient(153deg,#1b1128 0%,#100b1b 85%);
+  border-color:#4a3151;
+}
+html[data-theme="night-neon"] .news-card:hover{border-color:#a35f99;}
+html[data-theme="night-neon"] .news-card-meta span{
+  color:#ebc5e3;border-color:#765076;
+}
+html[data-theme="night-neon"] .news-card-version{color:#d09bc8;}
+html[data-theme="night-neon"] .news-arrow{
+  background:#1a1125;border-color:#624369;
+}
+html[data-theme="night-neon"] .news-arrow:hover:not(:disabled){
+  background:#2e1939;border-color:#d88fbc;
+}
+html[data-theme="night-neon"] .news-arrow:focus-visible{outline-color:#f4b2db;}
+html[data-theme="night-neon"] .hardware-pause-visual svg{
+  filter:sepia(.52) saturate(1.1) hue-rotate(267deg);
+}
+html[data-theme="night-neon"] .hardware-pause-visual figcaption{
+  border-top-color:#523353;color:#bc99bd;
+}
+html[data-theme="night-neon"] .hardware-range-callout,
+html[data-theme="night-neon"] .status-panel{
+  border-color:#523452;background:#150f21;
+}
+html[data-theme="night-neon"] .status-tag{border-color:#8c5489;color:#f5c5e5;}
+html[data-theme="night-neon"] .status-panel dl>div{border-top-color:#402742;}
+html[data-theme="night-neon"] .blue-text{color:#f1b0dc;}
+html[data-theme="night-neon"] .hardware-email{border-color:#865a81;}
+html[data-theme="night-neon"] .hardware-email:hover{background:#2b1932;border-color:#d18ab8;}
+
+/* Mesh Playground: recolor every moving link, range, node and packet, not its logic. */
+html[data-theme="night-neon"] .playground-section{
+  background:#0e091a;border-color:#372343;
+}
+html[data-theme="night-neon"] .playground-intro h2 span{color:#efa5d6;}
+html[data-theme="night-neon"] .playground-steps li::before{color:#da8dbf;}
+html[data-theme="night-neon"] .playground-shell{
+  background:#120c20;border-color:#68466e;
+  box-shadow:0 28px 88px rgba(32,9,42,.38);
+}
+html[data-theme="night-neon"] .playground-topline{
+  border-bottom-color:#442e51;
+}
+html[data-theme="night-neon"] .playground-topline span{color:#cfabd5;}
+html[data-theme="night-neon"] .playground-visual{
+  background:radial-gradient(ellipse at 47% 46%,#382143 0%,#1d132d 45%,#0c0918 88%);
+}
+html[data-theme="night-neon"] .playground-visual::before{
+  background-image:radial-gradient(rgba(236,145,207,.18) 1px,transparent 1px);
+}
+html[data-theme="night-neon"] .playground-links line{
+  stroke:#bc7eae;opacity:.66;
+}
+html[data-theme="night-neon"] .playground-links line.is-route{
+  stroke:#ffc1e6;opacity:1;
+  filter:drop-shadow(0 0 6px rgba(247,133,209,.68));
+}
+html[data-theme="night-neon"] .playground-links .mesh-range{
+  fill:rgba(184,101,173,.055);
+  stroke:rgba(217,145,202,.33);
+}
+html[data-theme="night-neon"] .playground-links .mesh-range.is-active{
+  fill:rgba(239,142,212,.085);stroke:rgba(250,173,226,.51);
+}
+html[data-theme="night-neon"] .playground-node{
+  --node-color:#cf98ce;
+  background:#281934;
+  color:#fff1fb;
+  box-shadow:0 0 0 7px rgba(220,125,200,.07),0 0 23px rgba(228,114,204,.15);
+}
+html[data-theme="night-neon"] .playground-node:hover,
+html[data-theme="night-neon"] .playground-node:focus-visible{
+  box-shadow:0 0 0 10px rgba(238,147,214,.16),0 0 31px rgba(228,130,207,.31);
+}
+html[data-theme="night-neon"] .playground-node.is-dragging{
+  box-shadow:0 0 0 15px rgba(243,150,221,.18),0 0 40px rgba(251,170,223,.45);
+}
+html[data-theme="night-neon"] .playground-node.is-source{
+  --node-color:#ffb1df;background:#48243e;
+}
+html[data-theme="night-neon"] .playground-node.is-target{
+  --node-color:#dca9fa;background:#372047;
+}
+html[data-theme="night-neon"] .playground-node.is-current{
+  box-shadow:0 0 0 9px rgba(242,155,215,.25),0 0 36px rgba(242,155,215,.43);
+}
+html[data-theme="night-neon"] .playground-packet{
+  border-color:#fff1f9;background:#ffe0ef;
+  box-shadow:0 0 12px rgba(250,182,227,.85),0 0 36px rgba(216,96,197,.65);
+}
+html[data-theme="night-neon"] .playground-packet::after{background:#9d538c;}
+html[data-theme="night-neon"] .playground-guide,
+html[data-theme="night-neon"] .playground-control label{color:#cbafce;}
+html[data-theme="night-neon"] .playground-controls{border-top-color:#442e51;}
+html[data-theme="night-neon"] .playground-control select{
+  border-color:#6a4a74;background:#24172f;color:#fff6ff;
+}
+html[data-theme="night-neon"] .playground-control select:focus-visible{
+  outline-color:#f5a9d9;
+}
+html[data-theme="night-neon"] .playground-send{
+  border-color:#f2b6db;background:#f3bbdf;color:#26132d;
+}
+html[data-theme="night-neon"] .playground-send:hover{background:#ffe0f2;}
+html[data-theme="night-neon"] .playground-reset{
+  border-color:#755276;color:#e9cbe4;
+}
+html[data-theme="night-neon"] .playground-reset:hover{background:#3c2446;}
+html[data-theme="night-neon"] .playground-status{color:#ddbfda;}
+html[data-theme="night-neon"] .playground-status[data-state="delivered"]{color:#f9bde8;}
+html[data-theme="night-neon"] .playground-status[data-state="waiting"]{color:#f0c2bd;}
+html[data-theme="night-neon"] .playground-tool,
+html[data-theme="night-neon"] .playground-toolbar button{
+  border-color:#715078;
+}
+html[data-theme="night-neon"] .playground-tool[aria-pressed="true"]{
+  background:#4e2a54;color:#ffe9f8;border-color:#d999ca;
+}
+html[data-theme="night-neon"] .mesh-key{border-color:#8e5f90;}
+html[data-theme="night-neon"] .playground-stats,
+html[data-theme="night-neon"] .playground-count{color:#eac6e2;}
+
+/* Keep palms decorative and content legible on narrow screens. */
+@media(max-width:1100px){
+  html[data-theme="night-neon"] body::before{opacity:.31;}
+}
+@media(max-width:700px){
+  html[data-theme="night-neon"] body::before{opacity:.13;mask-image:none;-webkit-mask-image:none;}
+  html[data-theme="night-neon"] .hero{
+    background:radial-gradient(circle at 85% 15%,rgba(172,73,145,.085),transparent 52%);
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  html[data-theme="night-neon"] .button-ivory,
+  html[data-theme="night-neon"] .news-card{transition:none;}
+}
